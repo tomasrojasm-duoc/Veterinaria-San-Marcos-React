@@ -1,149 +1,52 @@
-body { 
+:root {
+  --bs-link-color-rgb: 4, 120, 150;
+  --bs-link-hover-color-rgb: 3, 95, 120;
+}
+
+/* Botón primario con el celeste de la veterinaria */
+.btn-primary {
+  --bs-btn-bg: rgb(4, 159, 197);
+  --bs-btn-border-color: rgb(4, 159, 197);
+  --bs-btn-hover-bg: rgb(3, 135, 168);
+  --bs-btn-hover-border-color: rgb(3, 135, 168);
+  --bs-btn-active-bg: rgb(3, 120, 150);
+  --bs-btn-active-border-color: rgb(3, 120, 150);
+  --bs-btn-disabled-bg: rgb(4, 159, 197);
+  --bs-btn-disabled-border-color: rgb(4, 159, 197);
+}
+
+body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color:white;
+  background-color: white;
   background-image: url("/IMG/fondo.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed; 
+  background-attachment: fixed;
   min-height: 100vh;
-  margin: 0;
-
 }
 
-.contenedor {
-    font-family: Helvetica bold;
-    width: 400px;
-    margin: 50px auto;
-    padding: 30px;
-    text-align: center;
-    border-radius: 10px;
+/* Panel semitransparente que se usa sobre la imagen de fondo */
+.color {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
 }
 
-input {
-    padding: 10px;
-    margin: 10px;
-}
+/* ===== Encabezado ===== */
 
-button {
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-/*ENCABEZADO*/
-
-header {
-    background: rgb(4, 159, 197);
-    color: rgb(4, 159, 197);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-.cabecera {
-  width: min(1200px, 97%);
-  margin: 0 auto;
-}
-
-.encabezado {
-  min-height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+.navbar-vet {
+  background-color: rgb(4, 159, 197);
 }
 
 .logopng {
   width: auto;
-  height: 70px;
+  height: 60px;
   display: block;
 }
 
-.btnAgendar {
-  background: white;
-  color: #163020;
-  padding: 10px 14px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/*agenda de hora*/
-
-.formulario {
-    height: auto;
-    width: 60%;
-    margin: 0 auto;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 20px 30px;
-}
-
-.color {
-    height: auto;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;  
-    background-color: rgb(255,255,255,0.5);
-    color: black;
-    opacity: 1;
-}
-
-.margen
-  {
-    margin: 10px;
-    width: 60%;
-  }
-
-.margenAuto
-  {
-    margin: 0 auto;
-    width: 100%;
-  }
-
-.nosotros {
-  flex: 1;
-  min-width: 280px;
-  padding: 20px 30px;
-  align-items: flex-start;
-  text-align: left;
-}
-
-.seccionNosotros {
-  display: flex;
-  align-items: stretch;
-  gap: 0;
-  width: min(1100px, 90%);
-  margin: 20px auto;
-  flex-wrap: wrap;
-}
+/* ===== Nosotros ===== */
 
 .imgNosotros {
-  flex: 1;
-  min-width: 300px;
   overflow: hidden;
 }
 
@@ -154,62 +57,12 @@ nav a:hover {
   display: block;
 }
 
-/* Tabla de horas agendadas */
-
-#tablaAgendas {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-}
-
-#tablaAgendas th,
-#tablaAgendas td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-#tablaAgendas th {
-  background-color: rgb(4, 159, 197);
-  color: white;
-}
-
-#tablaAgendas tbody tr:hover {
-  background-color: rgba(4, 159, 197, 0.1);
-}
-
-
-/* Productos */
-.seccionProductos {
-  width: min(1100px, 90%);
-  margin: 20px auto 40px;
-  text-align: center;
-}
-
-.contenedorProductos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.cardProducto {
-  background-color: rgba(255,255,255,0.85);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
+/* ===== Productos ===== */
 
 .imgProducto {
   width: 100%;
-  max-width: 160px;
-  height: 160px;
+  height: 180px;
   object-fit: contain;
-  margin-bottom: 10px;
 }
 
 .precioProducto {
@@ -218,63 +71,13 @@ nav a:hover {
   margin: 5px 0 15px;
 }
 
-.cardProducto button {
-  background: rgb(4, 159, 197);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 14px;
-  font-weight: bold;
-  cursor: pointer;
+/* ===== Tablas (horas agendadas y admin) ===== */
+
+.tabla-vet {
+  --bs-table-hover-bg: rgba(4, 159, 197, 0.1);
 }
 
-.cardProducto button:hover {
-  opacity: 0.9;
-}
-
-#noti {
-  color: green;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-/* Registro */
-
-.linkRegistro {
-    margin-top: 15px;
-    font-size: 14px;
-}
-
-.linkRegistro a {
-    color: rgb(4, 159, 197);
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.linkRegistro a:hover {
-    text-decoration: underline;
-}
-
-/* Admin */
-
-#tablaUsuariosAdmin, #tablaProductosAdmin {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-}
-
-#tablaUsuariosAdmin th, #tablaUsuariosAdmin td,
-#tablaProductosAdmin th, #tablaProductosAdmin td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-#tablaUsuariosAdmin th, #tablaProductosAdmin th {
+.tabla-vet thead th {
   background-color: rgb(4, 159, 197);
   color: white;
-}
-
-#tablaUsuariosAdmin tbody tr:hover, #tablaProductosAdmin tbody tr:hover {
-  background-color: rgba(4, 159, 197, 0.1);
 }

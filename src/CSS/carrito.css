@@ -1,12 +1,3 @@
-.btnCarrito {
-    background: white;
-    color: #163020;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-weight: bold;
-    border: none;
-}
-
 .fondoCarrito {
     display: none;
     position: fixed;
@@ -15,7 +6,7 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.35);
-    z-index: 20;
+    z-index: 1040;
 }
 
 .fondoCarrito.mostrar {
@@ -26,11 +17,10 @@
     position: fixed;
     top: 0;
     right: -500px;
-    width: 470px;
-    max-width: 100%;
+    width: min(470px, 100%);
     height: 100vh;
     background: white;
-    z-index: 30;
+    z-index: 1050;
     display: flex;
     flex-direction: column;
     transition: 0.3s;
@@ -74,10 +64,18 @@
     margin-top: 30px;
 }
 
-
 .resumenCarrito {
     padding: 0 24px;
 }
+
+.botonesCarrito {
+    display: flex;
+    gap: 14px;
+    padding: 22px 24px;
+    background: #f3f3f3;
+}
+
+/* Filas del resumen (se usan en el drawer y en la página del carrito) */
 
 .filaCarrito {
     padding: 12px 0;
@@ -101,113 +99,13 @@
     font-size: 17px;
 }
 
-.botonesCarrito {
-    display: flex;
-    gap: 14px;
-    padding: 22px 24px;
-    background: #f3f3f3;
-}
-
-.botonesCarrito button,
-.botonesCarrito a,
-.botonPagoPagina {
-    flex: 1;
-    text-align: center;
-    padding: 12px;
-    border: none;
-    background: rgb(4, 159, 197);
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* pagina del carrito */
+/* Página del carrito: fondo liso en vez de la imagen */
 
 .paginaCarrito {
     background-image: none;
     background-color: #f4f4f4;
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-.contenidoCarrito {
-    width: 90%;
-    max-width: 1150px;
-    margin: 45px auto;
-    display: grid;
-    grid-template-columns: 1fr 360px;
-    gap: 35px;
-}
-
-.cabeceraPaginaCarrito {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 18px;
-}
-
-.cabeceraPaginaCarrito h1 {
-    font-size: 24px;
-    font-weight: normal;
-}
-
-.cabeceraPaginaCarrito a {
+.tituloResumen {
     color: rgb(4, 120, 150);
-}
-
-.productoPagina {
-    background: white;
-    margin-bottom: 12px;
-    padding: 18px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.productoPagina h3,
-.productoPagina p {
-    margin-top: 0;
-}
-
-.productoPagina p {
-    color: #666;
-}
-
-.eliminarPagina {
-    margin-top: 10px;
-}
-
-.carritoVacioPagina {
-    background: white;
-    padding: 45px 20px;
-    text-align: center;
-    color: #777;
-}
-
-.resumenPaginaCarrito {
-    background: white;
-    padding: 20px;
-    align-self: start;
-}
-
-.resumenPaginaCarrito h2 {
-    margin-top: 0;
-    color: rgb(4, 120, 150);
-    font-size: 19px;
-}
-
-.botonPagoPagina {
-    width: 100%;
-    margin-top: 8px;
-    cursor: pointer;
-}
-
-@media (max-width: 750px) {
-    .carritoLateral {
-        width: 100%;
-    }
-
-    .contenidoCarrito {
-        grid-template-columns: 1fr;
-    }
 }
