@@ -1,3 +1,4 @@
+
 export default function CampoFormulario({ id, etiqueta, tipo = "text", ...resto }) {
   return (
     <>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "../components/Header.jsx";
+import CampoFormulario from "../components/CampoFormulario.jsx";
 
 const VACIO = {
   nombreDuenio: "",
@@ -15,7 +16,6 @@ const VACIO = {
 export default function RegistroHora() {
   const [form, setForm] = useState(VACIO);
 
-  // Un solo manejador para todos los inputs (usa el atributo name)
   const cambiar = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const enviar = (e) => {
@@ -45,40 +45,55 @@ export default function RegistroHora() {
   return (
     <>
       <Header />
-      <section>
-        <form className="formulario color" noValidate onSubmit={enviar}>
-          <h1>Reserva de Hora</h1>
-          <h3>Ingrese sus datos:</h3>
-          <table>
-            <tbody>
-              <tr>
-                <td><input type="text" name="nombreDuenio" placeholder="Nombre"
-                  value={form.nombreDuenio} onChange={cambiar} /></td>
-                <td><input type="text" name="apellidoDuenio" placeholder="Apellidos"
-                  value={form.apellidoDuenio} onChange={cambiar} /></td>
-              </tr>
-              <tr>
-                <td><input type="email" name="correo" placeholder="correo@ejemplo.com"
-                  value={form.correo} onChange={cambiar} /></td>
-                <td><input type="text" name="telefono" placeholder="Número de contacto"
-                  value={form.telefono} onChange={cambiar} /></td>
-              </tr>
-              <tr>
-                <td><input type="text" name="nombreMascota" placeholder="Nombre de Mascota"
-                  value={form.nombreMascota} onChange={cambiar} /></td>
-                <td><input type="number" name="edadMascota" min="1" max="100"
-                  placeholder="Edad Mascota" value={form.edadMascota} onChange={cambiar} /></td>
-              </tr>
-              <tr>
-                <td><input type="date" name="fecha" value={form.fecha} onChange={cambiar} /></td>
-                <td><input type="time" name="hora" value={form.hora} onChange={cambiar} /></td>
-              </tr>
-            </tbody>
-          </table>
+      <main className="container my-5">
+        <div className="row justify-content-center">
+          <div className="col-12 col-lg-8">
+            <form className="card color shadow-sm p-4" noValidate onSubmit={enviar}>
+              <h1 className="h3 text-center">Reserva de Hora</h1>
+              <h2 className="h6 text-center text-muted mb-4">Ingrese sus datos:</h2>
 
-          <button type="submit">Agendar Hora</button>
-        </form>
-      </section>
+              <div className="row g-3">
+                <div className="col-md-6">
+                  <CampoFormulario id="nombreDuenio" name="nombreDuenio" etiqueta="Nombre"
+                    value={form.nombreDuenio} onChange={cambiar} />
+                </div>
+                <div className="col-md-6">
+                  <CampoFormulario id="apellidoDuenio" name="apellidoDuenio" etiqueta="Apellidos"
+                    value={form.apellidoDuenio} onChange={cambiar} />
+                </div>
+                <div className="col-md-6">
+                  <CampoFormulario id="correo" name="correo" tipo="email" etiqueta="Correo"
+                    placeholder="correo@ejemplo.com" value={form.correo} onChange={cambiar} />
+                </div>
+                <div className="col-md-6">
+                  <CampoFormulario id="telefono" name="telefono" etiqueta="Número de contacto"
+                    value={form.telefono} onChange={cambiar} />
+                </div>
+                <div className="col-md-6">
+                  <CampoFormulario id="nombreMascota" name="nombreMascota" etiqueta="Nombre de la mascota"
+                    value={form.nombreMascota} onChange={cambiar} />
+                </div>
+                <div className="col-md-6">
+                  <CampoFormulario id="edadMascota" name="edadMascota" tipo="number" min="1" max="100"
+                    etiqueta="Edad de la mascota" value={form.edadMascota} onChange={cambiar} />
+                </div>
+                <div className="col-md-6">
+                  <CampoFormulario id="fecha" name="fecha" tipo="date" etiqueta="Fecha"
+                    value={form.fecha} onChange={cambiar} />
+                </div>
+                <div className="col-md-6">
+                  <CampoFormulario id="hora" name="hora" tipo="time" etiqueta="Hora"
+                    value={form.hora} onChange={cambiar} />
+                </div>
+              </div>
+
+              <button type="submit" className="btn btn-primary w-100 mt-4">
+                Agendar Hora
+              </button>
+            </form>
+          </div>
+        </div>
+      </main>
     </>
   );
 }

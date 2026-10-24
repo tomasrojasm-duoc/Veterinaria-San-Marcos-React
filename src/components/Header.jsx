@@ -2,8 +2,6 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCarrito } from "../context/CarritoContext.jsx";
 
-// completo = true  -> muestra logo, menú colapsable y botones (página de inicio)
-// completo = false -> solo el link "Inicio" (resto de páginas)
 export default function Header({ completo = false }) {
   const navigate = useNavigate();
   const { cantidadTotal, abrir } = useCarrito();
@@ -23,14 +21,13 @@ export default function Header({ completo = false }) {
     <header className="sticky-top">
       <nav
         className="navbar navbar-expand-lg navbar-vet"
-        data-bs-theme="dark"
         aria-label="navegacion"
       >
         <div className="container">
           {!completo && (
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link text-white fw-bold" to="/">Inicio</Link>
+                <Link className="nav-link fw-bold" to="/">Inicio</Link>
               </li>
             </ul>
           )}
@@ -41,7 +38,6 @@ export default function Header({ completo = false }) {
                 <img src="/IMG/logopng.png" className="logopng" alt="Logo" />
               </Link>
 
-              {/* Botón hamburguesa: solo se ve en pantallas chicas */}
               <button
                 className="navbar-toggler"
                 type="button"
@@ -59,21 +55,31 @@ export default function Header({ completo = false }) {
               >
                 <ul className="navbar-nav me-auto">
                   <li className="nav-item">
-                    <Link className="nav-link text-white fw-bold" to="/">Inicio</Link>
+                    <Link className="nav-link fw-bold" to="/">Inicio</Link>
+                  </li>
+                  {/* Anclas: llevan a las secciones del Home (el Header completo solo se usa ahí) */}
+                  <li className="nav-item">
+                    <a className="nav-link fw-bold" href="#servicios" onClick={() => setMenuAbierto(false)}>Servicios</a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link fw-bold" href="#nosotros" onClick={() => setMenuAbierto(false)}>Nosotros</a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link fw-bold" href="#productos" onClick={() => setMenuAbierto(false)}>Productos</a>
                   </li>
                 </ul>
 
                 <div className="d-flex flex-column flex-lg-row gap-2 py-2 py-lg-0">
-                  <button className="btn btn-light fw-bold" onClick={() => irA("/registro-hora")}>
+                  <button className="btn btn-primary fw-bold" onClick={() => irA("/registro-hora")}>
                     Agendar Hora
                   </button>
-                  <button className="btn btn-light fw-bold" onClick={() => irA("/horas")}>
+                  <button className="btn btn-outline-primary fw-bold" onClick={() => irA("/horas")}>
                     Horas Agendadas
                   </button>
-                  <button className="btn btn-light fw-bold" onClick={() => irA("/login")}>
+                  <button className="btn btn-outline-primary fw-bold" onClick={() => irA("/login")}>
                     Iniciar Sesion
                   </button>
-                  <button className="btn btn-light fw-bold" onClick={abrirCarrito}>
+                  <button className="btn btn-vet-oscuro fw-bold" onClick={abrirCarrito}>
                     Carrito ({cantidadTotal})
                   </button>
                 </div>

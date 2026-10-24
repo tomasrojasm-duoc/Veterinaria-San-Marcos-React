@@ -20,7 +20,7 @@ export default function CarritoLateral() {
       <aside className={`carritoLateral ${abierto ? "abierto" : ""}`}>
         <div className="tituloCarrito">
           <h2>Resumen</h2>
-          <button onClick={cerrar}>X</button>
+          <button onClick={cerrar} aria-label="Cerrar carrito">X</button>
         </div>
 
         <div className="listaCarrito">
@@ -28,19 +28,37 @@ export default function CarritoLateral() {
             <p className="carritoVacio">No hay productos en el carrito.</p>
           ) : (
             carrito.map((p) => (
-              <div className="productoCarrito" key={p.id}>
-                <div className="datosProducto">
+              <div
+                className="productoCarrito d-flex justify-content-between border-bottom pb-3 mb-3"
+                key={p.id}
+              >
+                <div className="datosProducto d-flex flex-column gap-1">
                   <strong>{p.nombre}</strong>
                   <span>{formatoPrecio(p.precio)}</span>
-                  <div className="cantidadProducto">
-                    <button onClick={() => cambiarCantidad(p.id, -1)}>-</button>
+                  <div className="cantidadProducto d-flex align-items-center gap-2">
+                    <button
+                      className="btn btn-outline-secondary btn-sm"
+                      onClick={() => cambiarCantidad(p.id, -1)}
+                    >
+                      -
+                    </button>
                     <span>{p.cantidad}</span>
-                    <button onClick={() => cambiarCantidad(p.id, 1)}>+</button>
+                    <button
+                      className="btn btn-outline-secondary btn-sm"
+                      onClick={() => cambiarCantidad(p.id, 1)}
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
-                <div className="precioProducto">
+                <div className="precioProducto d-flex flex-column align-items-end gap-2 m-0">
                   <strong>{formatoPrecio(p.precio * p.cantidad)}</strong>
-                  <button onClick={() => quitar(p.id)}>Eliminar</button>
+                  <button
+                    className="btn btn-outline-danger btn-sm"
+                    onClick={() => quitar(p.id)}
+                  >
+                    Eliminar
+                  </button>
                 </div>
               </div>
             ))
@@ -76,8 +94,12 @@ export default function CarritoLateral() {
         </div>
 
         <div className="botonesCarrito">
-          <button onClick={iniciarPago}>Iniciar pago</button>
-          <Link to="/carrito" onClick={cerrar}>Ir al carro</Link>
+          <button className="btn btn-primary flex-fill" onClick={iniciarPago}>
+            Iniciar pago
+          </button>
+          <Link className="btn btn-primary flex-fill" to="/carrito" onClick={cerrar}>
+            Ir al carro
+          </Link>
         </div>
       </aside>
     </>

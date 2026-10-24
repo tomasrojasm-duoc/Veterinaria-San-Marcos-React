@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "../components/Header.jsx";
+import CampoFormulario from "../components/CampoFormulario.jsx";
 import { existeUsuario, guardarUsuarios, obtenerUsuarios } from "../utils/usuarios.js";
 
 export default function Registro() {
@@ -42,39 +43,52 @@ export default function Registro() {
   return (
     <>
       <Header />
-      <section>
-        <form className="formulario color" noValidate onSubmit={enviar}>
-          <h1>Crear Cuenta</h1>
-          <table>
-            <tbody>
-              <tr>
-                <td>
-                  <input type="text" placeholder="Usuario" value={usuario}
-                    onChange={(e) => setUsuario(e.target.value)} />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="password" placeholder="Contraseña" value={password}
-                    onChange={(e) => setPassword(e.target.value)} />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="password" placeholder="Confirmar contraseña" value={confirmar}
-                    onChange={(e) => setConfirmar(e.target.value)} />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+      <main className="container my-5">
+        <div className="row justify-content-center">
+          <div className="col-12 col-md-8 col-lg-5">
+            <form className="card color shadow-sm p-4" noValidate onSubmit={enviar}>
+              <h1 className="h3 text-center mb-4">Crear Cuenta</h1>
 
-          <button type="submit">Crear Cuenta</button>
+              <div className="mb-3">
+                <CampoFormulario
+                  id="usuario"
+                  etiqueta="Usuario"
+                  value={usuario}
+                  onChange={(e) => setUsuario(e.target.value)}
+                />
+              </div>
 
-          <p className="linkRegistro">
-            ¿Ya tienes cuenta? <Link to="/login">Inicia sesión aquí</Link>
-          </p>
-        </form>
-      </section>
+              <div className="mb-3">
+                <CampoFormulario
+                  id="password"
+                  etiqueta="Contraseña"
+                  tipo="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+
+              <div className="mb-4">
+                <CampoFormulario
+                  id="confirmar"
+                  etiqueta="Confirmar contraseña"
+                  tipo="password"
+                  value={confirmar}
+                  onChange={(e) => setConfirmar(e.target.value)}
+                />
+              </div>
+
+              <button type="submit" className="btn btn-primary w-100">
+                Crear Cuenta
+              </button>
+
+              <p className="text-center small mt-3 mb-0">
+                ¿Ya tienes cuenta? <Link className="fw-bold" to="/login">Inicia sesión aquí</Link>
+              </p>
+            </form>
+          </div>
+        </div>
+      </main>
     </>
   );
 }

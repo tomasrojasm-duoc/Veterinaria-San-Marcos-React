@@ -1,3 +1,4 @@
+
 .fondoCarrito {
     display: none;
     position: fixed;
@@ -75,7 +76,6 @@
     background: #f3f3f3;
 }
 
-/* Filas del resumen (se usan en el drawer y en la página del carrito) */
 
 .filaCarrito {
     padding: 12px 0;
@@ -99,7 +99,6 @@
     font-size: 17px;
 }
 
-/* Página del carrito: fondo liso en vez de la imagen */
 
 .paginaCarrito {
     background-image: none;

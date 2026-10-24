@@ -1,0 +1,560 @@
+
+:root {
+  --vet-claro: #F3FBFB;
+  --vet-suave: #CDEEEE;
+  --vet-menta: #6FD0CC;
+  --vet-teal: #1A9E9B;
+  --vet-profundo: #0C4E4C;
+
+  --bs-body-bg: var(--vet-claro);
+  --bs-body-color: var(--vet-profundo);
+  --bs-link-color-rgb: 12, 78, 76;
+  --bs-link-hover-color-rgb: 26, 158, 155;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id],
+main[id] {
+  scroll-margin-top: 80px; 
+}
+
+body {
+  background-image: none;
+  background-color: var(--vet-claro);
+  color: var(--vet-profundo);
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--vet-profundo);
+  font-weight: 700;
+}
+
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--vet-teal);
+  --bs-btn-border-color: var(--vet-teal);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--vet-profundo);
+  --bs-btn-hover-border-color: var(--vet-profundo);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--vet-profundo);
+  --bs-btn-active-border-color: var(--vet-profundo);
+  --bs-btn-disabled-bg: var(--vet-teal);
+  --bs-btn-disabled-border-color: var(--vet-teal);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--vet-profundo);
+  --bs-btn-border-color: var(--vet-teal);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--vet-teal);
+  --bs-btn-hover-border-color: var(--vet-teal);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--vet-teal);
+  --bs-btn-active-border-color: var(--vet-teal);
+}
+
+.btn-vet-oscuro {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--vet-profundo);
+  --bs-btn-border-color: var(--vet-profundo);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #093b3a;
+  --bs-btn-hover-border-color: #093b3a;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #093b3a;
+  --bs-btn-active-border-color: #093b3a;
+}
+
+.btn-light {
+  --bs-btn-color: var(--vet-profundo);
+  --bs-btn-hover-color: var(--vet-profundo);
+  --bs-btn-hover-bg: var(--vet-suave);
+}
+
+
+.navbar-vet {
+  background-color: #fff;
+  box-shadow: 0 2px 14px rgba(12, 78, 76, 0.12);
+}
+
+.navbar-vet .nav-link {
+  color: var(--vet-profundo);
+}
+
+.navbar-vet .nav-link:hover,
+.navbar-vet .nav-link:focus {
+  color: var(--vet-teal);
+}
+
+.logopng {
+  height: 56px;
+}
+
+
+.color {
+  background-color: #fff;
+  color: var(--vet-profundo);
+}
+
+.card.color {
+  border: 0;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 30px rgba(12, 78, 76, 0.12) !important;
+}
+
+
+.seccion {
+  padding: 4.5rem 0;
+}
+
+.seccionSuave {
+  background-color: var(--vet-suave);
+}
+
+.seccionBlanca {
+  background-color: #fff;
+}
+
+.etiquetaSeccion {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  margin-bottom: 0.9rem;
+  border-radius: 999px;
+  background-color: var(--vet-suave);
+  color: var(--vet-profundo);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hero {
+  padding: 5rem 0;
+  color: #fff;
+  background:
+    linear-gradient(115deg, rgba(12, 78, 76, 0.94) 0%, rgba(26, 158, 155, 0.82) 100%),
+    url("/IMG/fondo.jpeg") center / cover no-repeat;
+}
+
+.hero h1 {
+  color: #fff;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+}
+
+.hero .heroLema {
+  color: var(--vet-suave);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero .etiquetaSeccion {
+  background-color: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.heroFoto {
+  width: 100%;
+  max-height: 430px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  border: 6px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.3);
+}
+
+.tarjetaServicio {
+  border: 0;
+  border-radius: 1.25rem;
+  background-color: #fff;
+  box-shadow: 0 6px 24px rgba(12, 78, 76, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjetaServicio:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 34px rgba(12, 78, 76, 0.18);
+}
+
+.iconoServicio {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  background-color: var(--vet-suave);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+}
+
+.tarjetaNosotros {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(12, 78, 76, 0.15);
+}
+
+.imgNosotros {
+  position: relative;
+  min-height: 300px;
+}
+
+.imgNosotros img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Cifras y gatito */
+.fotoGatito {
+  width: 100%;
+  border-radius: 1.5rem;
+  box-shadow: 0 16px 40px rgba(12, 78, 76, 0.2);
+}
+
+.cifra {
+  padding: 1rem 0.5rem;
+  border-radius: 1rem;
+  background-color: var(--vet-claro);
+  border: 1px solid var(--vet-suave);
+}
+
+.cifra strong {
+  display: block;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  color: var(--vet-teal);
+  line-height: 1.1;
+}
+
+.cifra span {
+  font-size: 0.85rem;
+}
+
+.chipAnimal {
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background-color: var(--vet-suave);
+  color: var(--vet-profundo);
+  font-weight: 700;
+}
+
+/* Productos */
+.tarjetaProducto {
+  border: 0;
+  border-radius: 1.25rem;
+  background-color: #fff;
+  box-shadow: 0 6px 24px rgba(12, 78, 76, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjetaProducto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(12, 78, 76, 0.18);
+}
+
+.precioProducto {
+  color: var(--vet-teal);
+  font-size: 1.15rem;
+}
+
+.pie {
+  padding: 2.5rem 0;
+  background-color: var(--vet-profundo);
+  color: var(--vet-suave);
+}
+
+.logoPie {
+  height: 70px;
+  margin-bottom: 0.75rem;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+
+.tabla-vet {
+  --bs-table-hover-bg: rgba(26, 158, 155, 0.12);
+}
+
+.tabla-vet thead th {
+  background-color: var(--vet-profundo);
+  color: #fff;
+}
+
+
+.paginaCarrito {
+  background-color: var(--vet-claro);
+}
+
+.tituloCarrito,
+.botonesCarrito {
+  background-color: var(--vet-claro);
+}
+
+.tituloCarrito h2,
+.tituloResumen {
+  color: var(--vet-profundo);
+}
+
+.filaCarrito {
+  border-top-color: var(--vet-suave);
+}
+
+
+
+:root {
+  --bs-body-font-family: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body {
+  font-family: var(--bs-body-font-family);
+}
+
+.btn {
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--vet-profundo);
+  --bs-btn-border-color: var(--vet-profundo);
+  --bs-btn-hover-bg: var(--vet-teal);
+  --bs-btn-hover-border-color: var(--vet-teal);
+  --bs-btn-active-bg: var(--vet-teal);
+  --bs-btn-active-border-color: var(--vet-teal);
+  --bs-btn-disabled-bg: var(--vet-profundo);
+  --bs-btn-disabled-border-color: var(--vet-profundo);
+}
+
+.btn-outline-primary {
+  --bs-btn-border-color: var(--vet-profundo);
+}
+
+.navbar-vet {
+  border-bottom: 1px solid var(--vet-suave);
+  box-shadow: none;
+}
+
+.navbar-vet .btn-vet-oscuro {
+  --bs-btn-bg: var(--vet-menta);
+  --bs-btn-border-color: var(--vet-menta);
+  --bs-btn-color: var(--vet-profundo);
+  --bs-btn-hover-bg: var(--vet-suave);
+  --bs-btn-hover-border-color: var(--vet-suave);
+  --bs-btn-hover-color: var(--vet-profundo);
+}
+
+.tituloSeccion {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 0.5rem;
+}
+
+.subtituloSeccion {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.hero {
+  padding: 4.5rem 0;
+  color: var(--vet-profundo);
+  background: var(--vet-claro);
+}
+
+.hero h1 {
+  color: var(--vet-profundo);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 6vw, 3.75rem);
+  line-height: 1.05;
+}
+
+.hero .heroLema {
+  color: var(--vet-profundo);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.heroMarco {
+  position: relative;
+}
+
+.heroFoto {
+  height: 440px;
+  border: 0;
+  border-radius: 2rem 2rem 7rem 2rem;
+  box-shadow: none;
+}
+
+.heroInsignia {
+  position: absolute;
+  left: -1rem;
+  bottom: 1.75rem;
+  padding: 1rem 1.4rem;
+  border-radius: 1.25rem;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(12, 78, 76, 0.18);
+  line-height: 1.2;
+}
+
+.heroInsignia strong {
+  display: block;
+  font-size: 1.75rem;
+}
+
+.heroInsignia span {
+  font-size: 0.85rem;
+}
+
+.numeroServicio {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  color: var(--vet-teal);
+}
+
+.tarjetaServicio {
+  background-color: var(--vet-claro);
+  box-shadow: none;
+}
+
+.col:nth-child(even) > .tarjetaServicio {
+  background-color: var(--vet-suave);
+}
+
+.col:nth-child(even) .numeroServicio {
+  color: var(--vet-profundo);
+}
+
+.tarjetaServicio .text-muted {
+  color: var(--vet-profundo) !important;
+}
+
+.tarjetaNosotros {
+  border-radius: 2rem;
+}
+
+.fotoGatito {
+  border-radius: 7rem 2rem 2rem 2rem;
+  box-shadow: none;
+}
+
+.cifra strong {
+  color: var(--vet-profundo);
+}
+
+.precioProducto {
+  color: var(--vet-profundo);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.adminLayout {
+  display: flex;
+  min-height: calc(100vh - 72px);
+}
+
+.adminLateral {
+  width: 240px;
+  flex-shrink: 0;
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background: var(--vet-profundo);
+}
+
+.adminLateral a,
+.adminSalir {
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.8rem;
+  color: var(--vet-claro);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.adminLateral a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.adminLateral a.activo {
+  background: var(--vet-menta);
+  color: var(--vet-profundo);
+  font-weight: 700;
+}
+
+.adminMarca {
+  margin-bottom: 1.25rem;
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.adminSalir {
+  margin-top: auto;
+  background: transparent;
+  border: 1.5px solid var(--vet-suave);
+  font-weight: 600;
+}
+
+.adminContenido {
+  flex: 1;
+  min-width: 0;
+  padding: 2rem;
+}
+
+.tituloAdmin {
+  font-size: 2.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.kpiAdmin {
+  padding: 1.25rem 1.4rem;
+  border-radius: 1.25rem;
+  background: #fff;
+}
+
+.kpiAdmin span {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.kpiAdmin strong {
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+.kpiSuave {
+  background: var(--vet-suave);
+}
+
+@media (max-width: 991px) {
+  .adminLayout {
+    flex-direction: column;
+  }
+  .adminLateral {
+    width: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .adminMarca {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .adminSalir {
+    margin-top: 0;
+  }
+  .adminContenido {
+    padding: 1.25rem;
+  }
+}

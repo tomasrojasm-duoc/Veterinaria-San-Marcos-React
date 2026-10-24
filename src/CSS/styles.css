@@ -1,9 +1,9 @@
+
 :root {
   --bs-link-color-rgb: 4, 120, 150;
   --bs-link-hover-color-rgb: 3, 95, 120;
 }
 
-/* Botón primario con el celeste de la veterinaria */
 .btn-primary {
   --bs-btn-bg: rgb(4, 159, 197);
   --bs-btn-border-color: rgb(4, 159, 197);
@@ -26,13 +26,11 @@ body {
   min-height: 100vh;
 }
 
-/* Panel semitransparente que se usa sobre la imagen de fondo */
 .color {
   background-color: rgba(255, 255, 255, 0.5);
   color: black;
 }
 
-/* ===== Encabezado ===== */
 
 .navbar-vet {
   background-color: rgb(4, 159, 197);
@@ -44,7 +42,6 @@ body {
   display: block;
 }
 
-/* ===== Nosotros ===== */
 
 .imgNosotros {
   overflow: hidden;
@@ -57,7 +54,6 @@ body {
   display: block;
 }
 
-/* ===== Productos ===== */
 
 .imgProducto {
   width: 100%;
@@ -71,7 +67,6 @@ body {
   margin: 5px 0 15px;
 }
 
-/* ===== Tablas (horas agendadas y admin) ===== */
 
 .tabla-vet {
   --bs-table-hover-bg: rgba(4, 159, 197, 0.1);

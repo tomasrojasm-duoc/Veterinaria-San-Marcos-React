@@ -6,6 +6,7 @@ import { CarritoProvider } from "./context/CarritoContext.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./CSS/styles.css";
 import "./CSS/carrito.css";
+import "./CSS/tema.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
